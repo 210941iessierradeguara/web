@@ -1,5 +1,10 @@
-th{
+th, td{
     border-style: solid;
+    text-align: center;
+}
+
+#titulotabla{
+    
 }
 
 .eie{
@@ -19,4 +24,8 @@ th{
 }
 .sor{
     background-color: slategrey;
+}
+
+@media (min-width: 700px){
+
 }
