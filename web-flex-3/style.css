@@ -18,6 +18,10 @@ header, nav, aside, main, footer{
     flex-basis: 100%;
  }
 
+ main > p{
+     hyphens: auto;
+ }
+
  nav{
     height: 40px;
     padding: 8.5px;
@@ -35,11 +39,14 @@ nav>a{
     text-decoration: none;
     color: white;
     border: 1px solid darkcyan;
+    transition-property: background-color, color, flex-basis;
+    transition-duration: 0.5s;
 }
 
 nav>a:hover{
     background-color: white;
     color: darkcyan;
+    flex-basis: 15%;
 }
 
 footer{
