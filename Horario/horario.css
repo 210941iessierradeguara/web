@@ -4,7 +4,19 @@ th, td{
 }
 
 #titulotabla{
-    
+    resize: both;
+}
+
+tbody > tr > td > p{
+    display: none;
+}
+
+thead > tr > th > p{
+    display: none;
+}
+
+tfoot > tr > td {
+    text-align: right;
 }
 
 .eie{
@@ -26,6 +38,37 @@ th, td{
     background-color: slategrey;
 }
 
+.desayuno{
+    background-color: darkkhaki;
+}
+
+.actividades{
+    background-color: darkolivegreen;
+}
+
+.comida{
+    background-color: darkseagreen;
+}
+
 @media (min-width: 700px){
 
+    thead > tr > th > p{
+        display: block;
+    }
+
+    thead > tr > th > abbr{
+        display: none;
+    }
+
+    tbody > tr > td > p{
+        display: block;
+    }
+
+    tbody > tr > td > abbr{
+        display: none;
+    }
+
+    p{
+        display: none;
+    }
 }
