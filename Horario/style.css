@@ -7,11 +7,11 @@ th, td{
     resize: both;
 }
 
-tbody > tr > td > p{
+tbody > tr > td > span{
     display: none;
 }
 
-thead > tr > th > p{
+thead > tr > th > span{
     display: none;
 }
 
@@ -52,7 +52,7 @@ tfoot > tr > td {
 
 @media (min-width: 700px){
 
-    thead > tr > th > p{
+    thead > tr > th > span{
         display: block;
     }
 
@@ -60,7 +60,7 @@ tfoot > tr > td {
         display: none;
     }
 
-    tbody > tr > td > p{
+    tbody > tr > td > span{
         display: block;
     }
 
@@ -68,7 +68,7 @@ tfoot > tr > td {
         display: none;
     }
 
-    p{
+    ol{
         display: none;
     }
 }
