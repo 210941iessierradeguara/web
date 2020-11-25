@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+aside, nav, header, main, footer{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* Versión para móvil. Hasta 320 px */
+nav{
+    position: fixed;
+    top:0;
+    height: 50px;
+    width: 100%;
+}
+
+main{
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    min-height: calc(100vh - 50px - 50px);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+
+
+aside, header{
+    display: none;
+}
+
+/* Versión para tablet, de 321px a 767px */
+@media (min-width: 321px){
+    nav{
+        width: 80%;
+        right: 0;
+    }
+    main{
+        width: 80%;
+        right: 0;
+    }
+    footer{
+        width: 80%;
+        right: 0;
+    }
+    aside{
+        display: inline-block;
+        width: 20%;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+    }
+}
+
+/* Versión para desktop a prtir de 768px */
+@media (min-width: 768px){
+    nav{
+        width: 20%;
+        height: 100vh;
+        right: 0;
+    }
+    main{
+        width: 60%;
+        left: 20%;
+        overflow: auto;
+        min-height: calc(100vh - 50px - 50px);
+    }
+    footer{
+        width: 60%;
+        left: 20%;
+    }
+    header{
+        display: inline-block;
+        width: 60%;
+        height: 50px;
+        top: 0;
+        right: 20%;
+        position: absolute;
+    }
+}
