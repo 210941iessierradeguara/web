@@ -2,33 +2,47 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --color1: crimson;
+    --color2: white;
+    --color3: darkcyan;
+    --color4: grey;
+}
+
+aside, nav, header, main, footer{
+    border: 1px solid;
+}
+
+aside, nav{
+    background-color: var(--color4);
 }
 
 header{
+    top: 0;
     height: 10px;
-    border: 1px solid;
     padding: 15px;
+    position: fixed;
+    width: 100%;
 }
 
 nav{
-    top: 10px;
+    top: 20px;
     height: 10px;
-    border: 1px solid;
     padding: 30px;
 }
 
 main{
-    top: 20px;
-    height: calc(100vh - 15px -15px - 50px);
-    border: 1px solid;
+    top: 50px;
+    min-height: calc(100vh - 15px - 15px - 50px);
     overflow: auto;
+    width: 100%;
+    position: inherit;
+    border: solid 1px;
 }
 
 main > section{
-   display: flex;
    height: 174px;
-   border: 1px solid ;
    padding: 4px;
+   border: 1px solid;
 }
 
 nav > a > img, aside > a > img{     
@@ -39,12 +53,23 @@ header > img{
     display: none; 
 }
 
-aside{
+/* aside{
     border: 1px solid;
     height: 50px;
     position: absolute;
     bottom: 0;
     width: 100%;
+} */
+
+aside{
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: var(--color2);
+}
+aside>a>p{
+    display: none;
 }
 
 footer{
@@ -53,72 +78,95 @@ footer{
 
 nav>a{
     padding: 5px;
-    background-color: darkcyan;
+    background-color: var(--color3);
     border-radius: 3px;
     flex-basis: 17%;
     text-align: center;
     text-decoration: none;
-    color: white;
-    border: 1px solid darkcyan;
+    color: var(--color2);
+    border: 1px solid var(--color3);
     transition-property: background-color, color, flex-basis;
     transition-duration: 0.5s;
 }
 
-nav>p{
+nav>a>span{
     display: none;
 }
 
 aside > a{
-    background-color: darkcyan;
+    background-color: var(--color3);
     border-radius: 3px;
     flex-basis: 10%; 
     text-align: center;
     text-decoration: none;
-    color: white;
-    border: 1px solid darkcyan;
-    transition-property: background-color, color, flex-basis;
-    transition-duration: 0.5s;
+    color: var(--color2);
+    border: 1px solid var(--color3);
+}
+
+aside > a:hover, nav>a:hover{
+    background-color: var(--color2);
+    color: var(--color3);
 }
 
 @media(min-width: 650px){
    
+    header>img{
+        display: inline;
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    aside, nav{
+        background-color: var(--color4);
+    }
+
     nav{
+        top: 0;
         height: 10px;
         border: 1px solid;
         padding-top: 10px;
+        border-bottom: solid;
+        position: fixed;
+        width: 100%;
     }
 
     header{
-        top: 10px;
-        height: 10px;
+        top: 40px;
+        min-height: calc(100vh - 20px);
         border: 1px solid;
-        padding: 30px;
+        width: 85%;
+        right: 0;
+        position: absolute;
     }
 
     main{
-        height: calc(100vh - 15px - 15px);
+        top: 40px;
+        min-height: calc(100vh - 40px - 10px);
         border: 1px solid;
         width: 85%;
         margin: 15%;
         right: 0;
-        overflow: auto;
     }
 
     footer{
         display: none;
     }
-    nav>p{
+    nav>a>span{
         display: inline;
     }
     aside{
-        height: calc(100vh - 70px);
+        min-height: calc(100vh - 40px);
         padding: 10px;
-        position: absolute;
+        position: fixed;
         left: 0;
         width: 15%;
         border-right-style: solid;
         border-width: 1px;
         overflow: auto;
+    }
+
+    aside>a>p{
+        display: none;
     }
 }
 
@@ -128,13 +176,28 @@ aside > a{
         flex-basis: 20%;
         flex-grow: 0;
     }
+
+    aside>a>p{
+        display: inline;
+    }
+
     main {
         order: 2;
         flex-basis: 60%;
         flex-grow: 1;
         overflow: auto;
     }
+
+    main>section{
+        columns: 4;
+        column-rule-style: solid;
+        float: left;
+    }
+
     footer {
-        display: block;
+        display: inline-block;
+        width: 85%;
+        right: 0;
+        position: absolute;
     }
 }
