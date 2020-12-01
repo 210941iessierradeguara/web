@@ -10,9 +10,9 @@ if(respuesta == null){
 } else if (respuesta == incognita) {
     alert("Fin del juego, acertaste");
 } else if (respuesta == "4") {
-    alert("Uy! Dale a F% y prueba otra vez")
+    alert("Uy! Dale a F5 y prueba otra vez")
 }
 
 else{
-    alert("Fin del juego, numero equivocado, presiona F5 para volver a empezar");
+    alert("Fin del juego, número equivocado, presiona F5 para volver a empezar");
 }
