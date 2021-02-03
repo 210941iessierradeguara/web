@@ -2,7 +2,12 @@
 const express = require('express');
 const app = express();
 
-app.listen(3000, servidor);
+app.get('/', function name() {
+    console.log("Un cliente ha conectado")
+})
+
+const puerto = 3000;
+app.listen(puerto, servidor() );
 
 function servidor() {
     console.log('Servidor iniciado')
