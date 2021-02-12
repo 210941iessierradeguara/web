@@ -1,0 +1,29 @@
+Creación de un sitio node con plantilla ejs
+
+Crear carpeta del proyecto web39.ejercicio
+
+Creamos la siguiente jerarquía de carpetas:
+web39-ejercicio/
+    app/
+        views/
+            index.ejs
+        server.js <-- Aquí codigo
+    public/
+        style.css
+
+
+Inicializar el npm init
+
+Establecer punto de entrada en app/server.js
+
+Establecemos el script test como 'nodemon app/server.js'
+
+Instalamos librerias mediante el npm i y las de desarrollo como npm i
+    npm install <lib>
+    npm install <lib> -D
+
+La web ha de renderizar index.ejs cuando accedamos a http://localhost:3000/
+
+en index.ejs habremos de poner un documento HTML
+
+Todo lo de la carpeta public ha de ser accesible mediante express static
