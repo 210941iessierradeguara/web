@@ -1,0 +1,17 @@
+{
+  "name": "exev2-ej1-martinezeitodaniel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon ./app/server2.js",
+    "start": "node ./app/server2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
