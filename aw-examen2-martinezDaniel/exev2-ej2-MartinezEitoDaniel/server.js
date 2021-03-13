@@ -5,8 +5,14 @@ const puerto = 3001;
 
 app.get('/', function (req, res) {
     res.send("Hola Mundo")
-    res.sendFile(__dirname+"/imagen/img1.png")
-    res.sendFile(__dirname+"/tab/tabla.html")
+});
+
+app.get('/imagen', function (req, res) {
+    res.sendFile( path.join(__dirname,'archivos','img1.png') )
+});
+
+app.get('/tab', function (req, res) {
+    res.sendFile( path.join(__dirname,'archivos','tabla.html'))
 });
 
 
