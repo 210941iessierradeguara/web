@@ -10,7 +10,9 @@ app.get('/2/mas/3', function (req, res) {
 app.get('/:num1/mas/:num2', function (req,res) {
     let n1 = req.params.num1
     let n2 = req.params.num2
-    res.send(n1+n2);
+    let resultado = parseInt(n1)+parseInt(n2);
+    let resultadoTexto = "Resultado: "+resultado;
+    res.send(resultadoTexto);
 })
 
 app.listen(puerto, iniciaservidor)

@@ -3,7 +3,8 @@ const app = express();
 const path = require('path');
 const puerto = 3003;
 
-app.set('vies engine', 'ejs');
+app.set('view engine', 'ejs');
+
 let rutaPlantillas = path.join(__dirname, 'plantillas');
 app.set('views', rutaPlantillas);
 
@@ -14,7 +15,7 @@ app.get('/', function (req, res) {
         "prop2": "Tuesday",
         "prop3": "wednesday",
     };
-    res.render('index', datos)
+    res.render('index', datos);
 });
 
 app.listen(puerto, iniciaservidor)
