@@ -2,10 +2,14 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { send } = require('process');
-const puerto = 3000;
+const puerto = 3002;
+
+app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname+"/publica/index.html")
+    let yo = {"nombre": "Daniel", "apellidos": "Martínez Eito"}
+
+    res.render('index', yo);
 });
 
 app.listen(puerto, iniciaservidor)

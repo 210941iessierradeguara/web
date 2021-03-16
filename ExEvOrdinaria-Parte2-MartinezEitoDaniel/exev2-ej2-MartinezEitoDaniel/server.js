@@ -2,11 +2,21 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { send } = require('process');
-const puerto = 3000;
+const puerto = 3001;
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname+"/publica/index.html")
-});
+    res.send("Hola Clase")
+})
+
+app.get('/:imagen', function (req, res) {
+    res.sendFile(__dirname+"/imagen/img1.png")
+})
+
+app.get('/:html', function (req, res) {
+    res.sendFile(__dirname+"/html/htmll.html")
+})
+
+
 
 app.listen(puerto, iniciaservidor)
 function iniciaservidor() {

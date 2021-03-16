@@ -5,8 +5,8 @@ const { send } = require('process');
 const puerto = 3000;
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname+"/publica/index.html")
-});
+    res.sendFile(__dirname+"/Publico/index.html")
+})
 
 app.listen(puerto, iniciaservidor)
 function iniciaservidor() {
